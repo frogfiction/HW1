@@ -1,0 +1,28 @@
+var x;
+var y;
+var radius;
+
+function setup() {
+  createCanvas(600, 600);
+  x = random(width);
+  y = random(height);
+  radius = 50;
+}
+
+function draw() {
+  background('rgb(100%,0%,10%)');
+  if (dist(mouseX, mouseY, x, y) < radius) {
+    if (mouseIsPressed) {
+      x = random(width);
+      y = random(height);
+    }
+    fill(3, 200, 200, 200);
+  }
+  else {
+    fill(5, 220, 200, 200);
+  }
+
+  ellipse(x, y, radius * 1);
+  x += random(0, 0);
+  y += random(0, 0);
+}
