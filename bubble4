@@ -1,4 +1,4 @@
-var x;
+ var x;
 var y;
 var radius;
 
@@ -21,8 +21,13 @@ function draw() {
   else {
     fill(5, 220, 200, 200);
   }
-
+    if (mouseIsPressed) {
+      x = mouseX;
+      y = mouseY;
+    }
+  
   ellipse(x, y, radius * 1);
+  rect(40,40,40,40)
   x += random(0, 0);
   y += random(0, 0);
 }
